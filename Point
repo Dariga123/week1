@@ -1,0 +1,46 @@
+package com.company;
+import java.lang.Math;
+import java.util.Scanner;
+class Point{
+    double x;
+    double y;
+    public void setX(double x){
+        this.x=x;
+    }
+    public void setY(double y){
+        this.y=y;
+    }
+    public double getX(){
+        return x;
+    }
+    public double getY(){
+        return y;
+    }
+
+     public void calcDist(Point point2){
+        double distance= Math.sqrt((point2.getX()-getX())*(point2.getX()-getX())+(point2.getY()-getY())*(point2.getY()-getY()));
+        System.out.println("Distance between two points is: "+ distance);
+     }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner= new Scanner(System.in);
+        Point point1= new Point();
+        Point point2= new Point();
+	System.out.println("Enter x1, y1: ");
+    int x1= scanner.nextInt();
+    int y1=scanner.nextInt();
+    point1.setX(x1);
+    point2.setY(y1);
+    System.out.println("Enter x2, y2: ");
+    int x2= scanner.nextInt();
+    int y2=scanner.nextInt();
+    point1.setX(x2);
+    point2.setY(y2);
+       // double distance = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+       // System.out.println("Distance between two points is: "+ distance);
+        point1.calcDist(point2);
+    }
+}
