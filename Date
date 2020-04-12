@@ -1,0 +1,53 @@
+package com.company;
+
+import java.util.Scanner;
+class Date{
+    int day;
+    int month;
+    int year;
+
+//Date(int some_day, int some_month, int some_year){
+  //  this.day=some_day;
+    //this.month=some_month;
+    //this.year=some_year;
+//}
+public void setDay(int day){
+    if (day<31) {
+        this.day = day;
+    }
+}
+public int getDay(){
+    return this.day;
+}
+public int getMonth(){
+    return month;
+}
+public void setMonth(int month){
+    if(month<13) {
+        this.month = month;
+    }
+}
+public int getYear(){
+    return year;
+}
+public void setYear(int year){
+    this.year=year;
+}
+}
+
+class Main{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        Date date1=new Date();
+        System.out.print("Enter month: ");
+        int month=scanner.nextInt();
+        date1.setMonth(month);
+        System.out.print("Enter day: ");
+        int day=scanner.nextInt();
+        date1.setDay(day);
+        System.out.print("Enter year: ");
+        int year=scanner.nextInt();
+        date1.setYear(year);
+        System.out.println("Date: "+ date1.month+"/"+date1.day+"/"+date1.year);
+    }
+}
