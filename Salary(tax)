@@ -1,0 +1,20 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args){
+        int total, tax;
+        float salary;
+        Scanner inputNumScanner = new Scanner(System.in);
+
+        System.out.println("Enter total: ");
+        total = inputNumScanner.nextInt();
+
+        System.out.println("Enter the tax : ");
+        tax = inputNumScanner.nextInt();
+
+        salary = ((100-tax)*(total/100));
+
+        System.out.println("The salary is = " + salary );
+    }
+}
